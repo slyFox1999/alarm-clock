@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="shortcut icon" href="./assets/images/clock.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="clock-main">
+
+        <!-- alarm clock top icon -->
+        <div id='main-container'>
+            <div class="clock-box">
+                <img src="./assets/images/clock.png" alt="clock" id="alarm-icon">
+                <h2 id='clock'></h2>
+            </div>
+        </div>
+
+        <!-- main alarm field show to set alarm -->
+        <div id='alarm-container'>
+            <h3>Set Alarm Time</h3>
+            <label>
+                <div>
+                    <h5>Hour</h5>
+                    <select id='hrs' ></select>
+                </div>
+            </label>
+            <label>
+                <div>
+                    <h5>Min</h5>
+                    <select id='mins' ></select>
+                </div>
+            </label>
+            <label>
+                <div>
+                    <h5>Sec</h5>
+                    <select id='secs' ></select>
+                </div>
+            </label>
+            <label>
+                <div>
+                    <h5>AM/PM</h5>
+                    <select id="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+            </label>
+        </div>
+    
+        <!-- bottom buttons -->
+        <div id='buttonHolder'>
+            <button  id='setButton' onClick='alarmSet()'>Set Alarm</button>
+            <button  id='clearButton' onClick='alarmClear()'>Clear Alarm</button>
+        </div>
+
+    </div>
+
+    <!-- toast to show message -->
+    <div class="toast hidden" id="toast">
+
+        <div class="toast-content">
+          <div class="check"><img src="./assets/images/check.png" alt="check"></div>
+      
+          <div class="message">
+            <span class="text text-1">Success</span>
+            <span class="text text-2" id="message">Your changes has been saved</span>
+          </div>
+        </div>
+      
+      </div>
+
+
+      <!-- included script for alarm clock -->
+    <script type='text/javascript' src='./assets/js/main.js'></script>
+</body>
+</html>
